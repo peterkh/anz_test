@@ -1,6 +1,7 @@
 FROM openjdk:9-jdk-slim AS build
 COPY certificates /usr/local/share/ca-certificates/certificates
-RUN apt-get update && apt-get install --no-install-recommends -y -qq ca-certificates-java
+RUN apt-get update
+RUN apt-get install --no-install-recommends -y -qq ca-certificates-java
 RUN update-ca-certificates
 
 FROM openjdk:9-jre-slim
