@@ -1,3 +1,4 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  entrypoint: '/workspace/build.sh'
+  entrypoint: './build.sh'
+  dir: 'test2'
