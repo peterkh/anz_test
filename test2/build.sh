@@ -1,7 +1,7 @@
 #!/bin/bash
 export COMMIT_SHA=$(git rev-parse HEAD)
 
-if [ -n $PROJECT_ID ]; then
+if [[ -n "${PROJECT_ID}" ]]; then
   TAG="gcr.io/${PROJECT_ID}/anz_test2:${COMMIT_SHA}"
 else
   TAG="anz_test2:${COMMIT_SHA}"
