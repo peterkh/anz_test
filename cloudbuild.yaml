@@ -2,3 +2,5 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   entrypoint: './build.sh'
   dir: 'test2'
+  env:
+  -  'PROJECT_ID=$PROJECT_ID'
